@@ -11,7 +11,7 @@ public class AudioData : MonoBehaviour {
 
 	void Start () {
 		samples = new float[sampleRate]; 
-		clip = Microphone.Start(Microphone.devices[0], true, 1, sampleRate);
+		clip = Microphone.Start(Microphone.devices[0], true, 1, 44100);
 		source.clip = clip;
 		source.Play();
 	}
