@@ -13,13 +13,17 @@ public class AudioPeer : MonoBehaviour {
     public static float[] _audioBand = new float[8];
     public static float[] _audioBandBuffer = new float[8];
 
+  
     // Use this for initialization
     void Start () {
+     
         _audiosource = GetComponent<AudioSource>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+       
+
+    }
+
+    // Update is called once per frame
+    void Update () {
         GetSpectrumAudioSource();
         MakeFrequencyBands();
         Bandbuffer();
