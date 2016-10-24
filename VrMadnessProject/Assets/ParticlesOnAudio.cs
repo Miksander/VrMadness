@@ -21,10 +21,10 @@ public class ParticlesOnAudio : MonoBehaviour
     void Update()
     {
         var emission = _par.emission;
-        var rate = emission.rate;
+        var rate = emission.rateOverTime;
 
         rate.constantMax = (AudioPeer._audioBandBuffer[_band] * (maxEmissionRate - _minEmissionRate)) + _minEmissionRate; 
-        emission.rate = rate;
+        emission.rateOverTime = rate;
         // (AudioPeer._audioBandBuffer[_band] * (maxEmissionRate - _minEmissionRate)) + _minEmissionRate;
     }
 }
